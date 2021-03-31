@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BotAtMart</title>
+    <link rel="stylesheet" type="text/css" href="../../static/bot/styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../../javaScript/speedometer.js"></script>
+</head>
+
+<body onload='draw(0);' onload="drawWithInputValue();">
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuicon" aria-expanded="false" aria-controls="navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <a href="./index.html"><img src=""></a>
+                </div>
+                <div class="navbar-collapse collapse" id="menuicon">
+                    <ul class="nav navbar-nav">
+                        <li><a class="active_link" href="">Home</a></li>
+                        <li><a href="">Bot details</a></li>
+                        <li><a href="">Purchases</a></li>
+                        <li><a href="">Wish List</a></li>
+                        <li><a href="">Catalogue</a></li>
+                        <li><a href="">Sign out</a></li>
+                        <li><a href="">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <h1 class="welcome"> Welcome, {{User}}!</h1>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="container-fluid">
+                        <h2>Bot details</h2>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p>Bot name: {{botName}}</p>
+                                <p>Bot id: {{botId}}</p>
+                                <p>Total payload: {{currPayload}}</p>
+                                <p>Maximum Capacity: 40 Kg</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <canvas id="speedometer" width="440" height="220">Canvas not available.</canvas>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="btn">
+                                    <a class="btn follow" href="">Follow Me!</a>
+                                    <p></p>
+                                    <a class="btn sleep" href="">
+                                        <label class="switch">
+                                                <p>Sleep</p>
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        <p>Sleep</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="row">
+                        <a href="">
+                            <img src="../../images/avatar.png" class="img-responsive">
+                            <div class="caption">
+                                <p class="user-name">{{User}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="cart-details">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <h2>What's in your cart</h2>
+                                    </tr>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Weight</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in cartItems %}
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.weight }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class=col-sm-3>
+                    <div class="user-feedback">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=col-sm-9>
+                    <div class="wish-list">
+
+                    </div>
+                </div>
+                <div class=col-sm-3>
+                    <div class="bot-usage-stats">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="help">
+
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+# Text backup files
+*.bak
+
+#VSCode file
+.vscode*
+
+#Script
+*.sh
