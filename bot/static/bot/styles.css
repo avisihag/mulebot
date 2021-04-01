@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 .header{
     height: 100vh;
 }
@@ -35,6 +37,12 @@ li a{
 .user-name{
     text-align: center;
     color: coral;
+}
+.first{
+    border-radius: 10px;
+    background-color: rgb(240, 137, 3);
+    border-color: salmon;
+    border: rgb(240, 137, 3);
 }
 
 .row1{
@@ -126,15 +134,147 @@ li a{
     border-radius: 50%;
     }
 
+.table{
+    border-radius: 6px;
+    border-color: royalblue;
+    resize:none;
+    margin: 20px;
+}
 
-    .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 270px;
-    width: 300px;
-    padding: 25px;
-    border-radius: 5px;
-    background: rgb(10, 236, 187);
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
-    }
+.table-wrapper {
+    margin: 20px 20px 10px;
+    background: rgb(235, 238, 241);	
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 20px 10px 0px;
+}
+
+.table-title .add-new {
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+.table-title .add-new i {
+    margin-right: 4px;
+}
+table.table {
+    table-layout: fixed;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:last-child {
+    width: 100px;
+}
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}    
+table.table td a.add {
+    color: #27C46B;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}    
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+table.table .form-control.error {
+    border-color: #f50000;
+}
+table.table td .add {
+    display: none;
+}
+.wish-list tbody{
+    color: rgb(25, 110, 221)
+}
+.cart-details tbody{
+    color: seagreen;
+}
+.cart-details .cart-heading, .help{
+    margin-left: 20px;
+
+}
+    .cart-details .search-container{
+        float: right;
+      }  
+      .wish-list .search-container {
+          margin-top: 20px;
+          float: right;
+      }
+    
+  .cart-details input[type=text], .wish-list input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  
+  .cart-details .search-container button, .wish-list .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cart-details .search-container button:hover, .wish-list .search-container button:hover {
+    background: #ccc;
+  }
+
+  .btn-group{
+      padding: 10px;
+      margin: 20px 50px 50px;
+  }
+
+  textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+  
+  .help{
+      color: crimson;
+      margin: 30px 30px 10px;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  }
