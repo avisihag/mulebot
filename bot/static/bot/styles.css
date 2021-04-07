@@ -3,9 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background: linear-gradient(70deg, #e6e6e6, #f7f7f7);
+    color: #514B64;
+}
 .header{
     height: 100vh;
+}
+.navbar-brand{
+    height: 40px;
+    width: auto;
 }
 .title{
     height: 100vh;
@@ -14,6 +21,8 @@
     box-shadow: 0 5px 10px #efefef;
     width: 100%;
     text-transform: uppercase;
+    color: green;
+    
 }
 .navbar a:hover {
     background-color: #000;
@@ -28,6 +37,21 @@
     padding-bottom: 12px;
   }
   
+#moon-icon{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+  }
+  
+  #moon-icon:hover + .hide {
+    display: block;
+    color: black;
+  }
+
 li a{
     color: black;
 }
