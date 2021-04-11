@@ -3,11 +3,14 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    font-size: 100%;
+}
 #banner{
-    background: linear-gradient(rgba(0,0,0,0.4),#009688),url("../../images/banner.jpeg");
+    background: linear-gradient(rgba(0,0,0,0.4),#009688),url("../../static/bot/images/banner.jpeg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
 }
 .logo{
     width: 240px;
@@ -67,6 +70,13 @@ nav ul a{
 @media screen and (max-width: 770px) {
     .banner-text h1{
         font-size: 44px;
+        /* font-size: 3rem; */
+    }
+}
+@media screen and (max-width: 1060px) {
+    .banner-text h1{
+        font-size: 64px;
+        /* font-size: 4rem; */
     }
 }
 
@@ -91,15 +101,67 @@ nav ul a{
 .panel{
     border: 2px solid #009688;
     background-color: gray;
+    justify-content: center;
 }
 .panel p{
     padding-left: 20px;
     padding-top: 20px;
+    justify-content: center;
 }
-#speed{
+/* #speedometer{
     padding-left: 40px;
     padding-right: 20px;
-}
+} */
+.gauge {
+    width: 100%;
+    max-width: 250px;
+    padding-top: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: #004033;
+  }
+  
+  .gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #b4c0be;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+  }
+  
+  .gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #ff9800;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+  }
+  
+  .gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+  }
+  
 .btn{
     margin: 10px 10px;
     width: 100px;
@@ -116,7 +178,7 @@ nav ul a{
 }
 
 .btn.sleep{
-    /* background: transparent; */
+    background: transparent;
     color: #333;
     margin-bottom: 20px;
     margin-top: 0;
@@ -185,7 +247,32 @@ nav ul a{
     .slider.round:before {
     border-radius: 50%;
     }
-
+@media screen and (max-width: 770px) {
+    .btn{
+        padding-top: 10px;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    .gauge{
+        justify-content: center;
+        margin-left: 10px;
+    }
+    .panel{
+        justify-content: center;
+        margin-left: 10px;
+    }
+    .title-text{
+        /* padding-top: 10px; */
+        padding-bottom: 20px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+    }
+    .col-sm-4{
+        justify-content: center;
+        margin-left: 30px;
+    }
+}
 .user-details a{
     text-align: center;
     align-items: center;
@@ -196,6 +283,16 @@ nav ul a{
     margin-bottom: 20px;
     align-items: center;
     text-align: center;
+}
+@media screen and (max-width: 770px) {
+    .user-details a{
+        font-size: 20px;
+    }
+    #avatar{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 #cart{
@@ -358,11 +455,35 @@ align-items: center;
     background-color: #009688;
 }
 
+@media screen and (max-width: 770px) {
+    .cart-details{
+        justify-content: center;
+        margin-left: 10px;
+    }
+    .cart-details .search-container input{
+        justify-content: center;
+        align-items: center;
+        width: 360px;
+    }
+    .cart-details .cart-heading{
+        font-size: 20px;
+    }
+    .wish-list .table-wrapper{
+        margin-left: -5px;
+        justify-content: center;
+    }
+    .wish-list .table-title{
+        font-size: 20px;
+    }
+    .wish-list .add-new{
+        margin-top: -30px;
+    }
+}
 #wish{
     width: 100%;
     padding: 70px 30px;
     align-items: center;
-    background-image: url("../../images/wishlist_back.png");
+    background-image: url("../../static/bot/images/wishlist_back.png");
     background-size: cover;
     background-position: center;
 }
@@ -376,6 +497,7 @@ align-items: center;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .footer-left, .footer-center, .footer-right{
@@ -408,11 +530,22 @@ align-items: center;
 }
 
 @media screen and (max-width: 770px) {
-    .footer-left,.footer-right{
+    .footer-row{
         flex-basis: 100%;
         font-size:  14px;
+        flex-direction: column;
+        justify-content: center;
+        flex: 100%;
     }
-    .footer-right{
-        text-align: right;
+    #footer .title-text{
+        flex-direction: column;
+    }
+    .footer-right p, .footer-left a{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .footer-left img{
+        margin-left: 15px;
     }
 }
